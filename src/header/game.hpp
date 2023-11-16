@@ -25,6 +25,7 @@ class Game {
 
         bool isFull();
         bool isWin();
+
     private :
         sf::RenderWindow* window;
         sf::Event event;
@@ -34,6 +35,7 @@ class Game {
         sf::Font font;
         sf::RectangleShape square[16];
         sf::Text text[16];
+        sf::Text winText;
 
         int** arr;
 };

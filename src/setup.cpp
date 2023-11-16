@@ -1,4 +1,5 @@
 #include "header/game.hpp"
+#include <cmath>
 
 int randomCell() {
     std::random_device rd;
@@ -46,11 +47,21 @@ void Game::initShape() {
         square[i].setSize(sf::Vector2f(94, 94));   
 
         text[i].setFont(font);    
-        text[i].setCharacterSize(64);
+        text[i].setCharacterSize(40);
         text[i].setFillColor(sf::Color(0xD6, 0xB0, 0x8D));
         text[i].setOutlineThickness(3);
         text[i].setOutlineColor(sf::Color(0x37, 0x00, 0x00));
     }
+
+    winText.setFont(font);
+    winText.setCharacterSize(80);
+    winText.setFillColor(sf::Color(0xD6, 0xB0, 0x8D));
+    winText.setOutlineThickness(4);
+    winText.setOutlineColor(sf::Color(0x37, 0x00, 0x00));
+    winText.setString("Congratulation !");
+    sf::FloatRect textBounds = winText.getLocalBounds();
+    winText.setOrigin(textBounds.left + textBounds.width / 2.0f, textBounds.top + textBounds.height / 2.0f);
+    winText.setPosition(window->getSize().x / 2.0f, window->getSize().y / 2.0f);
 }
 
 void Game::setup() {
@@ -62,6 +73,14 @@ void Game::setup() {
         arr[i] = new int[4];
         for (int j = 0 ; j < 4 ; ++j)
             arr[i][j] = 0;
+    }
+
+    for (int i = 0 ; i < 3 ; ++i) 
+    {
+        for (int j = 0 ; j < 4 ; ++j)
+        {
+            arr[i][j] = std::pow(2, 4*i + j);
+        }
     }
 
     initializeNewCell();
