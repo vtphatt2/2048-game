@@ -1,5 +1,5 @@
-CMakeFiles/game.dir/src/game.cpp.o: \
-  /Users/VoThinhPhat/Desktop/2048-game/src/game.cpp \
+CMakeFiles/game.dir/src/condition.cpp.o: \
+  /Users/VoThinhPhat/Desktop/2048-game/src/condition.cpp \
   /Users/VoThinhPhat/Desktop/2048-game/src/header/game.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Window.hpp \

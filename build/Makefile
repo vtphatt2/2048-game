@@ -129,6 +129,30 @@ game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
 .PHONY : game/fast
 
+src/condition.o: src/condition.cpp.o
+.PHONY : src/condition.o
+
+# target to build an object file
+src/condition.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/condition.cpp.o
+.PHONY : src/condition.cpp.o
+
+src/condition.i: src/condition.cpp.i
+.PHONY : src/condition.i
+
+# target to preprocess a source file
+src/condition.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/condition.cpp.i
+.PHONY : src/condition.cpp.i
+
+src/condition.s: src/condition.cpp.s
+.PHONY : src/condition.s
+
+# target to generate assembly for a file
+src/condition.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/condition.cpp.s
+.PHONY : src/condition.cpp.s
+
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
 
@@ -177,6 +201,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/setup.o: src/setup.cpp.o
+.PHONY : src/setup.o
+
+# target to build an object file
+src/setup.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/setup.cpp.o
+.PHONY : src/setup.cpp.o
+
+src/setup.i: src/setup.cpp.i
+.PHONY : src/setup.i
+
+# target to preprocess a source file
+src/setup.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/setup.cpp.i
+.PHONY : src/setup.cpp.i
+
+src/setup.s: src/setup.cpp.s
+.PHONY : src/setup.s
+
+# target to generate assembly for a file
+src/setup.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/setup.cpp.s
+.PHONY : src/setup.cpp.s
+
+src/shift.o: src/shift.cpp.o
+.PHONY : src/shift.o
+
+# target to build an object file
+src/shift.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/shift.cpp.o
+.PHONY : src/shift.cpp.o
+
+src/shift.i: src/shift.cpp.i
+.PHONY : src/shift.i
+
+# target to preprocess a source file
+src/shift.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/shift.cpp.i
+.PHONY : src/shift.cpp.i
+
+src/shift.s: src/shift.cpp.s
+.PHONY : src/shift.s
+
+# target to generate assembly for a file
+src/shift.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/shift.cpp.s
+.PHONY : src/shift.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +258,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... game"
+	@echo "... src/condition.o"
+	@echo "... src/condition.i"
+	@echo "... src/condition.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/setup.o"
+	@echo "... src/setup.i"
+	@echo "... src/setup.s"
+	@echo "... src/shift.o"
+	@echo "... src/shift.i"
+	@echo "... src/shift.s"
 .PHONY : help
 
 
