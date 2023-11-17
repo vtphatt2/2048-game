@@ -32,6 +32,7 @@ void Game::handleEvent() {
                 break;
 
             case sf::Event::KeyPressed :
+                if (isWin()) return ;
                 switch (event.key.code)
                 {
                     case sf::Keyboard::Left :
@@ -155,6 +156,8 @@ void Game::render() {
 
     if (isWin())
         window->draw(winText);
+    else if (isLose())
+        window->draw(loseText);
 
     window->display();
 }

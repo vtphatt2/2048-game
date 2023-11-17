@@ -61,7 +61,17 @@ void Game::initShape() {
     winText.setString("Congratulation !");
     sf::FloatRect textBounds = winText.getLocalBounds();
     winText.setOrigin(textBounds.left + textBounds.width / 2.0f, textBounds.top + textBounds.height / 2.0f);
-    winText.setPosition(window->getSize().x / 2.0f, window->getSize().y / 2.0f);
+    winText.setPosition(window->getSize().x / 2.0f, window->getSize().y / 1.1f);
+
+    loseText.setFont(font);
+    loseText.setCharacterSize(80);
+    loseText.setFillColor(sf::Color(0xD6, 0xB0, 0x8D));
+    loseText.setOutlineThickness(4);
+    loseText.setOutlineColor(sf::Color(0x37, 0x00, 0x00));
+    loseText.setString("You lose !");
+    textBounds = loseText.getLocalBounds();
+    loseText.setOrigin(textBounds.left + textBounds.width / 2.0f, textBounds.top + textBounds.height / 2.0f);
+    loseText.setPosition(window->getSize().x / 2.0f, window->getSize().y / 1.1f);
 }
 
 void Game::setup() {
@@ -75,13 +85,13 @@ void Game::setup() {
             arr[i][j] = 0;
     }
 
-    for (int i = 0 ; i < 3 ; ++i) 
-    {
-        for (int j = 0 ; j < 4 ; ++j)
-        {
-            arr[i][j] = std::pow(2, 4*i + j);
-        }
-    }
+    // for (int i = 0 ; i < 3 ; ++i) 
+    // {
+    //     for (int j = 0 ; j < 4 ; ++j)
+    //     {
+    //         arr[i][j] = std::pow(2, 4*i + j);
+    //     }
+    // }
 
     initializeNewCell();
     initializeNewCell();
