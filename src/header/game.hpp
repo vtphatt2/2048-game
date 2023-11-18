@@ -13,15 +13,19 @@ class Game {
         ~Game();
         void initShape();
         void setup();
+
+        void run();
+        void handleEvent();
+        void update();
+        void render();
+
         void initializeNewCell();
         void leftShift();
         void rightShift();
         void upShift();
         void downShift();
-        void run();
-        void handleEvent();
-        void update();
-        void render();
+        void fillColorCells();
+        void scaleText();
 
         bool isFull();
         bool isWin();

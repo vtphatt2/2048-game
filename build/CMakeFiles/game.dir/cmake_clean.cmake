@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/game.dir/src/setup.cpp.o.d"
   "CMakeFiles/game.dir/src/shift.cpp.o"
   "CMakeFiles/game.dir/src/shift.cpp.o.d"
+  "CMakeFiles/game.dir/src/utility.cpp.o"
+  "CMakeFiles/game.dir/src/utility.cpp.o.d"
   "game"
   "game.pdb"
 )
