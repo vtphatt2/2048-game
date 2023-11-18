@@ -19,6 +19,8 @@ void Game::initializeNewCell() {
         y = randomCell();
     } 
     arr[x][y] = 2;
+
+    isMove = false;
 }
 
 void Game::initShape() {
@@ -78,9 +80,11 @@ void Game::setup() {
     font.loadFromFile("../resource/Arial.ttf");
 
     arr = new int*[4];
+    sub_arr = new int*[4];
     for (int i = 0 ; i < 4 ; ++i) 
     {
         arr[i] = new int[4];
+        sub_arr[i] = new int[4]; 
         for (int j = 0 ; j < 4 ; ++j)
             arr[i][j] = 0;
     }
@@ -93,6 +97,7 @@ void Game::setup() {
     //     }
     // }
 
+    isMove = false;
     initializeNewCell();
     initializeNewCell();
 }

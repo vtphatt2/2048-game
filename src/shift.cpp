@@ -13,6 +13,7 @@ void Game::leftShift() {
                     {
                         arr[i][j] *= 2;
                         arr[i][z] = 0;
+                        isMove = true;
                         j = z;
                         break;
                     }
@@ -29,11 +30,13 @@ void Game::leftShift() {
                 if (z < 4)
                 {
                     arr[i][j] = arr[i][z];
+                    isMove = true;
                     arr[i][z] = 0;
                 }
             }
         }
     }
+
 }
 
 void Game::rightShift() {
@@ -48,6 +51,7 @@ void Game::rightShift() {
                     if (arr[i][z] == arr[i][j])
                     {
                         arr[i][j] *= 2;
+                        isMove = true;
                         arr[i][z] = 0;
                         j = z;
                         break;
@@ -65,6 +69,7 @@ void Game::rightShift() {
                 if (z >= 0)
                 {
                     arr[i][j] = arr[i][z];
+                    isMove = true;
                     arr[i][z] = 0;
                 }
             }
@@ -85,6 +90,7 @@ void Game::upShift() {
                     {
                         arr[i][j] *= 2;
                         arr[z][j] = 0;
+                        isMove = true;
                         i = z;
                         break;
                     }
@@ -102,6 +108,7 @@ void Game::upShift() {
                 {
                     arr[i][j] = arr[z][j];
                     arr[z][j] = 0;
+                    isMove = true;
                 }
             }
         }
@@ -122,6 +129,7 @@ void Game::downShift() {
                         arr[i][j] *= 2;
                         arr[z][j] = 0;
                         i = z;
+                        isMove = true;
                         break;
                     }
                     if (arr[z][j] != 0) break;
@@ -138,6 +146,7 @@ void Game::downShift() {
                 {
                     arr[i][j] = arr[z][j];
                     arr[z][j] = 0;
+                    isMove = true;
                 }
             }
         }

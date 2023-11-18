@@ -43,7 +43,10 @@ class Game {
         sf::Text winText;
         sf::Text loseText;
 
+        bool isMove;
+
         int** arr;
+        int** sub_arr;
 };
 
 #endif // GAME_HPP

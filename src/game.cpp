@@ -9,8 +9,13 @@ Game::Game() : window(new sf::RenderWindow(sf::VideoMode(800, 600), "2048 GAME")
 Game::~Game() {
     delete window;
     for (int i = 0 ; i < 4 ; ++i) 
+    {
         delete[] arr[i];
+        delete[] sub_arr[i];
+    }
     delete[] arr;
+    delete[] sub_arr;
+
     std::cout << "window pointer was deallocated !\n";
 }
 
@@ -38,22 +43,22 @@ void Game::handleEvent() {
                 {
                     case sf::Keyboard::Left :
                         leftShift();
-                        initializeNewCell();
+                        if (isMove) initializeNewCell();
                         break;
 
                     case sf::Keyboard::Right :
                         rightShift();
-                        initializeNewCell();
+                        if (isMove) initializeNewCell();
                         break;
 
                     case sf::Keyboard::Up :
                         upShift();
-                        initializeNewCell();
+                        if (isMove) initializeNewCell();
                         break;
 
                     case sf::Keyboard::Down :
                         downShift();
-                        initializeNewCell();
+                        if (isMove) initializeNewCell();
                         break;
 
                     default :
